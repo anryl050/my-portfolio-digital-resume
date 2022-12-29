@@ -1,16 +1,24 @@
 *{
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
     margin: 0;
-    padding: 0; 
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    
 }
+
+:root{
+    --back-color:rgb(250, 224, 228);
+}
+
 main {      
     background-color:aquamarine;
 }
 
+/* Formatting of the Navigation Bar */
 .navbar{
-    padding-top: 33px;
-    padding-bottom: 33px;
-    background-color: rgb(250, 224, 228);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: var(--back-color) ;
 }
 
 .navbar-container{
@@ -23,6 +31,7 @@ main {
     justify-items: center;
 }
 
+/* Navigation bar - left side */
 .navbar-left{
     display:flex;
     justify-content:flex-start;
@@ -31,12 +40,14 @@ main {
     list-style: none
 }
 
+/* Navigation bar - middle element */
 .navbar-middle{
     display:flex;
     align-items: center;
     flex: 0 0 auto;
 }
 
+/* Navigation bar - right side */
 .navbar-right{
     display:flex;
     justify-content:flex-end;
@@ -50,6 +61,7 @@ main {
        max-width: 150px;
     }  
 
+    /* formatting of the Links - left side */
 .navbar-left a {
     padding: 8px 12px;
     color: inherit;
@@ -57,6 +69,7 @@ main {
     font-size: 15px;
     }
 
+       /* formatting of the Links - right side */
 .navbar-right a {
     padding:8px 12px;
     color: inherit;
@@ -64,9 +77,97 @@ main {
     font-size: 15px;
     } 
 
-.my-info-cont{
+/* .main-content-container {
     display: flex;
-       background-color: rgb(250, 224, 228);
+}  */
+/* .head-sec{
+    border-left:1px;
+} */
+
+/* About Me section */
+.about-me-info{
+    display: flex;
+    background-color: var(--back-color);
+    color: black;
+}
+
+/* Project Section */
+.projects{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid firebrick
+}
+
+.projects-grid-head{
+   padding-right: 15px;
+   border-right: 2px solid black;
+}
+
+.projects-grid{
+    display: flex;
+        /* background-color: var(--back-color); */
+    flex-wrap:wrap;
+    gap:10px;
+    flex-grow: 1;
+    color: black;
+}
+
+.projects-grid-item{
+    flex-grow: 0;
+    width:calc(50% - 5px);
+    padding: 15px;
+    border: 1px solid firebrick
+}
+
+.main-item{
+    width: 100%;
+}
+
+.projects-grid-item a{
+    color: inherit;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+/* Contact Me section */
+.contact-info-main{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid firebrick
+}
+
+.contact-head {
+    padding-right: 15px;
+    border-right: 2px solid black;
+ }
+
+ .contact{
+    display: flex;
+        /* background-color: var(--back-color); */
+    flex-wrap:wrap;
+    gap:10px;
+    flex-grow: 1;
+    color: black;
+}
+
+.contact-links{
+    display: flex;
+    list-style: none;
+}
+
+.contact a{
+    padding:8px 12px;
+    color: inherit
+
+/* .contact-info{
+    display: flex;
+    background-color: var(--back-color);
     color: black;
 }
 
@@ -77,6 +178,6 @@ main {
 
 .contact a{
     padding:8px 12px;
-    color: inherit;  
-}
+    color: inherit;   
+}*/
 
