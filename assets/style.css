@@ -3,22 +3,28 @@
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    
 }
 
 :root{
-    --back-color:rgb(250, 224, 228);
+    --nav-color:#84a59d;
+    --back-color:#f7ede2;
+    --border-color:#f6bd60;
 }
 
-main {      
-    background-color:aquamarine;
+main {  
+    padding: 10px;
+    margin-top: auto;   
+    margin-bottom: auto; 
+    background-color: var(--back-color);
+    border-bottom:20px solid var(--border-color);
 }
 
 /* Formatting of the Navigation Bar */
 .navbar{
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color: var(--back-color) ;
+    background-color: var(--nav-color) ;
+    border-top: 20px solid var(--border-color);
 }
 
 .navbar-container{
@@ -61,6 +67,26 @@ main {
        max-width: 150px;
     }  
 
+    /* addition on a button */
+    .main-button{
+        position:static;
+        /* margin: -50px auto 100px; */
+        padding: 20px 40px;
+        border-radius:15px;
+        background-color:  #d98f89;
+        color: white;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing:2px;
+        text-transform: uppercase; 
+    }
+
+    .w-button{
+        margin:20px;
+        border:0;
+        cursor:pointer;
+    }
+
     /* formatting of the Links - left side */
 .navbar-left a {
     padding: 8px 12px;
@@ -69,7 +95,7 @@ main {
     font-size: 15px;
     }
 
-       /* formatting of the Links - right side */
+/* formatting of the Links - right side */
 .navbar-right a {
     padding:8px 12px;
     color: inherit;
@@ -77,18 +103,34 @@ main {
     font-size: 15px;
     } 
 
-/* .main-content-container {
-    display: flex;
-}  */
-/* .head-sec{
-    border-left:1px;
-} */
+/* Hero section */
+.hero {
+    
+    height: 400px;
+    width: 100%;
+    background-image: url("./bookshelf1.jpg");
+    background-size: cover;
+    background-position: center;
+    border-top: 20px solid var(--border-color);
+    border-bottom: 20px solid var(--border-color);
+}
 
 /* About Me section */
+
 .about-me-info{
     display: flex;
-    background-color: var(--back-color);
-    color: black;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid firebrick
+}
+
+.about-me-head{
+    display: flex;
+    width: 10%;
+    padding-right: 15px;
+    border-right: 2px solid black; 
 }
 
 /* Project Section */
@@ -102,8 +144,10 @@ main {
 }
 
 .projects-grid-head{
-   padding-right: 15px;
-   border-right: 2px solid black;
+    display: flex;
+    width: 10%;
+    padding-right: 15px;
+    border-right: 2px solid black;
 }
 
 .projects-grid{
@@ -132,6 +176,16 @@ main {
     font-size: 15px;
 }
 
+/* Need to figure out formatting of the images to fit only on the left side and not overfrow to "Project" side */
+.img-project-1{
+    height: 400px;
+    width: 100%;
+}
+
+.img-project-2{
+    height: 200px;
+    width: 100%;
+}
 /* Contact Me section */
 .contact-info-main{
     display: flex;
@@ -143,14 +197,17 @@ main {
 }
 
 .contact-head {
+    display: flex;
+    width: 10%;
     padding-right: 15px;
-    border-right: 2px solid black;
+    border-right: 2px solid black; 
  }
 
  .contact{
     display: flex;
         /* background-color: var(--back-color); */
     flex-wrap:wrap;
+    justify-content: center;
     gap:10px;
     flex-grow: 1;
     color: black;
@@ -159,25 +216,11 @@ main {
 .contact-links{
     display: flex;
     list-style: none;
-}
+    align-items:center;
+    flex-wrap: wrap;
+    /* flex: 1 1 0; */
+    }
 
 .contact a{
     padding:8px 12px;
     color: inherit
-
-/* .contact-info{
-    display: flex;
-    background-color: var(--back-color);
-    color: black;
-}
-
-.contact{
-    display: flex;
-    list-style: none;
-}
-
-.contact a{
-    padding:8px 12px;
-    color: inherit;   
-}*/
-
