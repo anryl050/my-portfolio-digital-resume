@@ -12,7 +12,7 @@
     --letter-color:#33658a;
 }
 
-h1, h2, p{
+h1, h2, p1, p2{
     color:var(--letter-color);
 }
 
@@ -26,8 +26,8 @@ main {
 
 /* Formatting of the Navigation Bar */
 .navbar{
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     background-color: var(--nav-color) ;
     border-top: 20px solid var(--border-color);
 }
@@ -39,7 +39,7 @@ main {
     margin-left: auto;
     padding-right: 50px;
     padding-left: 50px;
-    justify-items: center;
+    justify-items:right;
 }
 
 /* Navigation bar - left side */
@@ -47,29 +47,40 @@ main {
     display:flex;
     justify-content:flex-start;
     align-items:center;
-    flex: 1 1 0;
+    flex: 1;
     list-style: none
 }
+
 
 /* Navigation bar - middle element */
 .navbar-middle{
     display:flex;
+    flex-direction: column;
     align-items: center;
-    flex: 0 0 auto;
+    flex: 1.5;
 }
 
 /* Navigation bar - right side */
 .navbar-right{
     display:flex;
-    justify-content:flex-end;
+    justify-content:space-between;
     align-items:center;
     flex-wrap: wrap;
-    flex: 1 1 0;
+    flex: 1.5;
     list-style: none
     }
 
+h1 { 
+    margin-bottom:1rem; 
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing:1px;
+    }
+
 .programmer-img{
-       max-width: 150px;
+    max-width: 150px;
     }  
 
  /* formatting of the Home Button in the left side of the nav bar*/ 
@@ -82,7 +93,7 @@ button{
     font-size: 14px;
     font-weight: 600;
     letter-spacing:2px;
-    text-transform: uppercase; 
+    text-transform: uppercase;  
     cursor:pointer;
     margin:20px;
     border:0;
@@ -93,17 +104,16 @@ button{
     padding:8px 12px;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     letter-spacing:1px;
-    text-transform: uppercase; 
     } 
 
 /* Hero section */
 .hero {
-    
-    height: 400px;
+    height: 300px; */
     width: 100%;
+    /* position: fixed; */
     background-image: url("./bookshelf1.jpg");
     background-size: cover;
     background-position: center;
@@ -119,14 +129,22 @@ button{
     gap: 50px;
     padding: 20px;
     margin: 20px;
-    border: 1px solid firebrick
 }
 
 .about-me-head{
-    display: flex;
-    width: 10%;
-    padding-right: 15px;
+    display:flex;
+    justify-content:flex-start;
+    align-items:top;
+    width: 15%;
+    /* padding-right: 30px; */
     border-right: 2px solid var(--letter-color); 
+}
+
+.par{
+    display:flex;
+    justify-content:flex-start;
+    align-items:top;
+    flex: 1;
 }
 
 /* Project Section */
@@ -135,24 +153,29 @@ button{
     flex-wrap: wrap;
     gap: 50px;
     padding: 20px;
+    padding-top: 0px;
     margin: 20px;
-    border: 1px solid firebrick
+    margin-top: 0px;
 }
 
 .projects-grid-head{
-    display: flex;
-    width: 10%;
-    padding-right: 15px;
-    border-right: 2px solid var(--letter-color);
+    display:flex;
+    justify-content:flex-start;
+    align-items:top;
+    width: 15%;
+    /* padding-right: 30px; */
+    border-right: 2px solid var(--letter-color); 
 }
 
 .projects-grid{
-    display: flex;
-    flex-wrap:wrap;
+    display:flex;
+    justify-content:flex-start;
+    align-items:top;
+    flex: 1;
     gap:10px;
-    flex-grow: 1;
-    color: var(--letter-color);
-}
+    flex-wrap:wrap;
+    color: var(--letter-color); 
+   }
 
 .projects-grid-item{
     flex-grow: 0;
@@ -165,6 +188,12 @@ button{
     width: 100%;
 }
 
+.projects-grid-item main-item h3 {
+    color: var(--letter-color);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+
+}
 /* .projects-grid-item a{
     color: var(--letter-color);
     font-family: Arial, Helvetica, sans-serif;
@@ -174,48 +203,58 @@ button{
 /* Need to figure out formatting of the images to fit only on the left side and not overfrow to "Project" side */
 .img-project-1{
     height: 400px;
-    width: 100%;
+    width: 100%; 
 }
 
 .img-project-2{
     height: 200px;
-    width: 100%;
+    width: 100%; 
 } 
+ 
 /* Contact Me section */
+
 .contact-info-main{
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
     padding: 20px;
+    padding-top: 0px;
     margin: 20px;
-    border: 1px solid firebrick
+    margin-top: 0px;
+    }
+
+.contact-head{
+    display:flex;
+    justify-content:flex-start;
+    align-items:top;
+    width: 15%;
+    /* padding-right: 30px; */
+    border-right: 2px solid var(--letter-color); 
 }
 
-.contact-head {
-    display: flex;
-    width: 10%;
-    padding-right: 15px;
-    border-right: 2px solid var(--letter-color); 
- }
-
- .contact{
-    display: flex;
-        /* background-color: var(--back-color); */
-    flex-wrap:wrap;
-    justify-content: center;
-    gap:10px;
-    flex-grow: 1;
-    color: var(--letter-color);
+.contact{
+    display:flex;
+    justify-content:center;
+    align-items:top;
+    flex: 1;
 }
 
 .contact-links{
     display: flex;
     list-style: none;
+    justify-content: center;
     align-items:center;
     flex-wrap: wrap;
+    gap:10px;
     /* flex: 1 1 0; */
     }
 
 .contact a{
     padding:8px 12px;
-    color: inherit
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing:1px;
+    
+    color: var(--letter-color);
+}
