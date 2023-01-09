@@ -262,17 +262,26 @@ h1 {
 /* mobile responsible design - Phone */
 @media screen and (max-width: 660px){
     
-        h1{
+    .navbar-left, .navbar-middle, .navbar-right {
+        flex-direction: column;
+        justify-content: center;
+        flex:0.5;
+    }
+    h1{
         font-size: 20px;
         }
-        .section-titles{
+    .my-photo{
+        width: 110px;
+    }
+    .section-titles{
         font-size: auto;
         border-right: 0px;
         width: 100%;
         border-bottom: 2px solid var(--letter-color)
     }
-    navbar-container, .about-me-info, .projects, .contact-info-main {
+
+    .about-me-info, .projects, .contact-info-main {
         flex-direction: column;
         width: 100%;
         } 
-    }
+}
