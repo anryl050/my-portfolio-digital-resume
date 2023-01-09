@@ -261,6 +261,7 @@ h1 {
 
 /* mobile responsible design - Phone */
 @media screen and (max-width: 660px){
+    
         h1{
         font-size: 20px;
         }
@@ -270,7 +271,7 @@ h1 {
         width: 100%;
         border-bottom: 2px solid var(--letter-color)
     }
-        .about-me-info, .projects, .contact-info-main {
+    navbar-container, .about-me-info, .projects, .contact-info-main {
         flex-direction: column;
         width: 100%;
         } 
