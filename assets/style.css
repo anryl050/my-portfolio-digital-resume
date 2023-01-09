@@ -102,7 +102,7 @@ h1 {
     box-shadow: inset 0px 0px 15px var(--back-color), 0 0 15px var(--back-color);
     }
 
-/* Hero section */
+/* Hero section - backgrounf image and the quote text*/
 .hero {
     width: 100%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./bookshelf1.jpg");
@@ -178,6 +178,7 @@ h1 {
     background-color: #f6bd60;
     }
 
+    /* When hovering over the projects, the borders of the projects change color */
 .projects-grid-item:hover {    
     box-shadow: inset 0px 0px 15px var(--nav-color), 0 0 15px var(--nav-color);
     }
@@ -231,6 +232,7 @@ h1 {
     gap:10px;
     }
 
+    /* Formatting of the links */
 .contact a{
     padding:8px 12px;
     font-family: Arial, Helvetica, sans-serif;
@@ -238,43 +240,38 @@ h1 {
     font-weight: 600;
     color: var(--letter-color);
     }
+
+    /* When hovering over the links, the borders of the links change color */
 .contact a:hover {    
     box-shadow: inset 0px 0px 15px var(--nav-color), 0 0 15px var(--nav-color);
     }
     
-    /* mobile friendly - Tablet */
-    @media screen and (max-width: 992px){
-        /* extend the size of the header for better visibility  */
+/* mobile responsible design - Tablet */
+@media screen and (max-width: 992px){
         .projects-grid-item .project-header{
             width: 100%;
         }
-        /* update thesize of the elements within the project section to ensure that they are the same size and are lined up from top to bottom */
         .projects-grid-item{
             width: 100%;
         }
         .img-project-1{
             height: 200px;
-        }
+        } 
     }
 
-    /* mobile friendly - Phone */
+/* mobile responsible design - Phone */
 @media screen and (max-width: 660px){
-
-h1{
-    font-size: 20px;
-}
-
-.about-me-info{
-    
-}
-.section-titles{
-    font-size: auto;
-    border-right: 0px;
-    border-bottom: 2px solid var(--letter-color); 
-}
-.par, .projects-grid, .contact{
-    flex-grow: 1;
-}
-
-        
+        h1{
+        font-size: 20px;
+        }
+        .section-titles{
+        font-size: auto;
+        border-right: 0px;
+        width: 100%;
+        border-bottom: 2px solid var(--letter-color)
+    }
+        .about-me-info, .projects, .contact-info-main {
+        flex-direction: column;
+        width: 100%;
+        } 
     }
