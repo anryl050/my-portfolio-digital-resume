@@ -18,6 +18,16 @@ p{
     font-size: 16px;
     color:var(--letter-color);
     }
+    
+h1 { 
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 15px;
+    background-color: var(--border-color);
+    border-radius: 10px;
+    }
 
 main {  
     padding: 10px;
@@ -72,15 +82,7 @@ main {
     list-style: none
     }
 
-h1 { 
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 30px;
-    font-weight: 600;
-    padding: 15px;
-    background-color: var(--border-color);
-    border-radius: 10px;
-    }
+
 
     /* formatting of Avatar */
 .my-photo{
@@ -130,7 +132,7 @@ h1 {
         justify-content:flex-start;
         align-items:top;
         width: 15%;
-        border-right: 2px solid var(--letter-color); 
+        border-right: 3px solid var(--letter-color); 
         color:var(--letter-color);
         }
 
@@ -154,9 +156,7 @@ h1 {
     flex-wrap: wrap;
     gap: 50px;
     padding: 20px;
-    padding-top: 0px;
     margin: 20px;
-    margin-top: 0px;
     }
 
 .projects-grid{
@@ -208,12 +208,9 @@ h1 {
 /* Contact Me section */
 .contact-info-main{
     display: flex;
-    flex-wrap: wrap;
     gap: 50px;
     padding: 20px;
-    padding-top: 0px;
     margin: 20px;
-    margin-top: 0px;
     }
 
 .contact{
@@ -228,7 +225,6 @@ h1 {
     list-style: none;
     justify-content: center;
     align-items:center;
-    flex-wrap: wrap;
     gap:10px;
     }
 
@@ -248,10 +244,17 @@ h1 {
     
 /* mobile responsible design - Tablet */
 @media screen and (max-width: 992px){
-        .projects-grid-item .project-header{
+    .about-me-info, .projects, .contact-info-main {
+        flex-direction: column;
+        width: 100%;
+        } 
+        .section-titles{
+            font-size: auto;
+            border-right: 0px;
             width: 100%;
+            border-bottom: 3px solid var(--letter-color)
         }
-        .projects-grid-item{
+        .projects-grid-item .project-header, .projects-grid-item {
             width: 100%;
         }
         .img-project-1{
@@ -261,27 +264,18 @@ h1 {
 
 /* mobile responsible design - Phone */
 @media screen and (max-width: 660px){
-    
-    .navbar-left, .navbar-middle, .navbar-right {
-        flex-direction: column;
-        justify-content: center;
-        flex:0.5;
-    }
     h1{
         font-size: 20px;
         }
     .my-photo{
         width: 110px;
-    }
-    .section-titles{
-        font-size: auto;
-        border-right: 0px;
-        width: 100%;
-        border-bottom: 2px solid var(--letter-color)
-    }
-
-    .about-me-info, .projects, .contact-info-main {
+    } 
+    .navbar-left, .navbar-middle, .navbar-right {
         flex-direction: column;
-        width: 100%;
-        } 
+        justify-content: center;
+        flex:0.5;
+    }
+   .contact-links{
+        flex-direction: column;
+    }
 }
