@@ -16,3 +16,4 @@ The website was built using HMTL and CSS programing languages.
 ## Deployed Website URL
 URL:   https://anryl050.github.io/my-portfolio-digital-resume/
 ## Website’s Final Look
+![Anastasiya's Portfolio - Digital Resume](https://user-images.githubusercontent.com/118693401/211435426-eb2f303a-800d-461d-b885-a81a85d76aed.png)
